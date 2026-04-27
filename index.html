@@ -115,21 +115,23 @@
     /* ── MOBILE OPTIMIZATIONS ── */
     @media (max-width: 600px) {
       .logo-slot {
-        width: clamp(160px, 65vw, 280px);
+        width: clamp(200px, 75vw, 320px);
       }
       .waves-wrap {
-        height: 48%;
+        height: 62%;
       }
       .center {
+        top: 46%;
         transform: translate(-50%, -50%);
       }
       @keyframes bob {
         0%, 100% { transform: translate(-50%, -50%); }
-        50%       { transform: translate(-50%, calc(-50% - 8px)); }
+        50%       { transform: translate(-50%, calc(-50% - 10px)); }
       }
       .coming-soon {
-        margin-top: 15px;
+        margin-top: 10px;
         letter-spacing: 4px;
+        font-size: 0.7rem;
       }
     }
 
