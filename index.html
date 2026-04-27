@@ -115,23 +115,24 @@
     /* ── MOBILE OPTIMIZATIONS ── */
     @media (max-width: 600px) {
       .logo-slot {
-        width: clamp(200px, 75vw, 320px);
+        width: clamp(220px, 80vw, 340px);
       }
       .waves-wrap {
-        height: 62%;
+        height: 58%;
       }
       .center {
-        top: 46%;
+        top: 38%;
         transform: translate(-50%, -50%);
       }
       @keyframes bob {
         0%, 100% { transform: translate(-50%, -50%); }
-        50%       { transform: translate(-50%, calc(-50% - 10px)); }
+        50%       { transform: translate(-50%, calc(-50% - 6px)); }
       }
       .coming-soon {
-        margin-top: 10px;
+        margin-top: 5px;
         letter-spacing: 4px;
-        font-size: 0.7rem;
+        font-size: 0.75rem;
+        opacity: 0.8;
       }
     }
 
