@@ -111,6 +111,28 @@
       z-index: 10;
       overflow: hidden;
     }
+
+    /* ── MOBILE OPTIMIZATIONS ── */
+    @media (max-width: 600px) {
+      .logo-slot {
+        width: clamp(160px, 65vw, 280px);
+      }
+      .waves-wrap {
+        height: 48%;
+      }
+      .center {
+        transform: translate(-50%, -50%);
+      }
+      @keyframes bob {
+        0%, 100% { transform: translate(-50%, -50%); }
+        50%       { transform: translate(-50%, calc(-50% - 8px)); }
+      }
+      .coming-soon {
+        margin-top: 15px;
+        letter-spacing: 4px;
+      }
+    }
+
     .wave {
       position: absolute;
       left: -5%;
@@ -187,7 +209,8 @@
   <script>
     // Generate particle effect
     const sky = document.getElementById('sky');
-    const particleCount = 20;
+    const isMobile = window.innerWidth < 600;
+    const particleCount = isMobile ? 10 : 20;
 
     for (let i = 0; i < particleCount; i++) {
       const particle = document.createElement('div');
